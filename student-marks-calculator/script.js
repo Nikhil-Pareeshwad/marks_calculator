@@ -11,8 +11,8 @@ const subjectIds = [
     "subject5"
 ];
 
-const PASS_MARK = 35;
-const MAX_MARK = 100;
+// const PASS_MARK = 35;
+// const MAX_MARK = 100;
 
 // Handle form submission
 form.addEventListener("submit", function (event) {
