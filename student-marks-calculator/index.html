@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A student marks calculator for calculating total marks, average, and results.">
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Student Marks Calculator</h1>
+            <p>Enter your marks to calculate your result.</p>
+        </header>
+
+        <form id="marksForm" novalidate>
+            <div class="field">
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                    autocomplete="name"
+                >
+            </div>
+
+            <h2>Subject Marks</h2>
+            <p class="hint">Enter marks between 0 and 100.</p>
+
+            <div class="field">
+                <label for="subject1">Mathematics</label>
+                <input type="number" id="subject1"
+                       min="0" max="100" step="any"
+                       inputmode="decimal" required>
+            </div>
+
+            <div class="field">
+                <label for="subject2">Science</label>
+                <input type="number" id="subject2"
+                       min="0" max="100" step="any"
+                       inputmode="decimal" required>
+            </div>
+
+            <div class="field">
+                <label for="subject3">English</label>
+                <input type="number" id="subject3"
+                       min="0" max="100" step="any"
+                       inputmode="decimal" required>
+            </div>
+
+            <div class="field">
+                <label for="subject4">Computer Science</label>
+                <input type="number" id="subject4"
+                       min="0" max="100" step="any"
+                       inputmode="decimal" required>
+            </div>
+
+            <div class="field">
+                <label for="subject5">Social Studies</label>
+                <input type="number" id="subject5"
+                       min="0" max="100" step="any"
+                       inputmode="decimal" required>
+            </div>
+
+            <p id="errorMessage" class="error"
+               role="alert" aria-live="polite"></p>
+
+            <div class="actions">
+                <button type="submit">Calculate Result</button>
+                <button type="reset" class="secondary">
+                    Reset
+                </button>
+            </div>
+        </form>
+
+        <section id="result" aria-live="polite" hidden>
+            <h2>Result Summary</h2>
+            <p id="resultName"></p>
+            <p>Total: <strong id="total"></strong></p>
+            <p>Average: <strong id="average"></strong></p>
+            <p>Percentage: <strong id="percentage"></strong></p>
+            <p>Grade: <strong id="grade"></strong></p>
+            <p>Final Result: <strong id="status"></strong></p>
+        </section>
+
+        <footer>
+            <p>Student Marks Calculator | Learning Project</p>
+        </footer>
+    </main>
+</body>
+</html>
